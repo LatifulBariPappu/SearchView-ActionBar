@@ -9,7 +9,7 @@ import android.widget.SearchView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
     ListView listView;
     ArrayAdapter adapter;
     ArrayList<String>list1;
@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
+                adapter.getFilter().filter(newText);
                 return false;
             }
         });
